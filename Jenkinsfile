@@ -1,5 +1,10 @@
 pipeline {
     agent { label 'local_ubuntu' }
+
+    options {
+        shell '/usr/bin/bash'
+    }
+
     stages {
         stage('Build') {
             steps {
