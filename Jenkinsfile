@@ -7,6 +7,11 @@ pipeline {
     }
 
     stages {
+        stage('Prepare environment') {
+            steps {
+                sh 'apt-get install build-essential'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'make'
