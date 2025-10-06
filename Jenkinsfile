@@ -9,7 +9,8 @@ pipeline {
     stages {
         stage('Prepare environment') {
             steps {
-                sh 'apt-get install build-essential'
+                sh 'apt-get update --yes'
+                sh 'apt-get install --yes build-essential'
             }
         }
         stage('Build') {
