@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'ubuntu:20.04'
-            args '-u root'
         }
     }
 
