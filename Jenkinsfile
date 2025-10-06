@@ -1,5 +1,10 @@
 pipeline {
-    agent { label 'local_ubuntu' }
+    agent {
+        docker {
+            image 'ubuntu:20.04'
+            args '-u root'
+        }
+    }
 
     stages {
         stage('Build') {
