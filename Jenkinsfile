@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Prepare environment') {
             steps {
+                sh 'whoami'
                 sh 'apt-get update --yes'
                 sh 'apt-get install --yes build-essential'
             }
